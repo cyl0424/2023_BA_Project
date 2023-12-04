@@ -4,6 +4,7 @@ This is team project of 2023 Fall Business Analytics
 
 - [2023_BA_Project](#2023_ba_project)
   - [Usage](#usage)
+    - [0. Preprocessed Data](#0-preprocessed-data)
     - [1. Load and Preprocess Data](#1-load-and-preprocess-data)
     - [2. Training and Model Creation](#2-training-and-model-creation)
     - [3. Ensemble Prediction](#3-ensemble-prediction)
@@ -13,6 +14,10 @@ This is team project of 2023 Fall Business Analytics
   - [Notes](#notes)
 
 ## Usage
+
+### 0. Preprocessed data
+
+- [master_data](https://github.com/cyl0424/BA_Preprocessing)
 
 ### 1. Load and Preprocess Data
 
