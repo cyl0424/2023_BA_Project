@@ -27,8 +27,9 @@ This repository is a team project for the 2023 Fall Business Analytics course in
     - [7. Additional Notes and Considerations](#7-additional-notes-and-considerations)
       - [7.1 Hyperparameter Tuning Details](#71-hyperparameter-tuning-details)
     - [8. Dataset](#8-dataset)
-      - [8.1 Training Dataset](#81-training-dataset)
-      - [8.2 Collecting Real-time Rental Data (Optional)](#82-collecting-real-time-rental-data--optional-)
+      - [8.1 Preprocessing Data](#81-preprocessing-data)
+      - [8.2 Training Dataset](#81-training-dataset)
+      - [8.3 Collecting Real-time Rental Data (Optional)](#83-collecting-real-time-rental-data--optional-)
 
 ## Project Overview
 
@@ -242,7 +243,31 @@ The hyperparameter tuning results and analysis can be found in the [Hyperparamet
 
 ### 8. Dataset
 
-#### 8.1 Training Dataset
+#### 8.1 [Preprocessing Data](<(https://github.com/cyl0424/BA_Preprocessing)>)
+
+For the preprocessing of Seoul Bike Rental Station Information, you can refer to the [BA_Preprocessing](https://github.com/cyl0424/BA_Preprocessing) repository. The preprocessing repository includes the following files:
+
+- **seoul_bicycle_master.json**: Master data of Seoul Bike rental stations.
+- **master_preprocessing.ipynb**: Jupyter Notebook for normalizing the coordinates in the master data where they are recorded as 0.0 using the Google API.
+- **seoul_bicycle_maser_preprocessed.csv**: File containing data processed using master_preprocessing.ipynb.
+- **master_info_with_nearby.ipynb**: Jupyter Notebook for adding columns of data for the nearest rental station and its distance using seoul_bicycle_maser_preprocessed.csv.
+- **master_info_with_nearby.csv**: File containing data with added information about nearby rental stations using master_info_with_nearby.ipynb.
+- **master_final.ipynb**: Jupyter Notebook for processing rows where the district data has not been correctly recorded due to differences in address formatting.
+- **master_final.csv**: File containing data where 'stn_gu' has been appropriately added to all data using master_final.ipynb.
+
+Columns in master_final.csv:
+
+- **stn_id**: Represents the id of the rental station and is of object type.
+- **stn_addr**: Represents the full address of the rental station and is of object type.
+- **stn_lat**: Represents the latitude of the rental station and is of float64 type.
+- **stn_lng**: Represents the longitude of the rental station and is of float64 type.
+- **nearby_id**: Represents the id of the nearest rental station and is of object type.
+- **nearby_km**: Represents the distance to the nearest rental station in km and is of float64 type.
+- **stn_gu**: A district data column was added for analysis as the weather data classification is done by district. This is of object type.
+
+[BA_Preprocessing Repository](https://github.com/cyl0424/BA_Preprocessing)
+
+#### 8.2 Training Dataset
 
 To replicate the analysis and run the code, you'll need the dataset file `merged_data.csv`. You can download it using the following link:
 
@@ -250,7 +275,7 @@ To replicate the analysis and run the code, you'll need the dataset file `merged
 
 Place the downloaded file in the project's root directory before running the Jupyter Notebook.
 
-#### 8.2 Collecting Real-time Rental Data (Optional)
+#### 8.3 Collecting Real-time Rental Data (Optional)
 
 If you want to collect real-time Seoul Public Bike rental data for testing purposes, you can use the provided Jupyter Notebook:
 
