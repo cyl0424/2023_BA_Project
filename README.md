@@ -209,30 +209,24 @@ After training and evaluating the LightGBM and XGBoost models, here are the key 
 
 #### LightGBM Model
 
-| Metric             | Training Value | Test Value |
-| ------------------ | -------------- | ---------- |
-| Training RMSE      | 1.9139         | 1.9659     |
-| Training R-squared | 0.5621         | 0.5377     |
-| Test RMSE          | 1.9659         | 0.5377     |
-| Test R-squared     | 0.5377         | 0.5377     |
+| Metric    | Training Value | Test Value |
+| --------- | -------------- | ---------- |
+| RMSE      | 1.9139         | 1.9659     |
+| R-squared | 0.5621         | 0.5377     |
 
 #### XGBoost Model
 
-| Metric             | Training Value | Test Value |
-| ------------------ | -------------- | ---------- |
-| Training RMSE      | 1.7220         | 1.9135     |
-| Training R-squared | 0.6455         | 0.5620     |
-| Test RMSE          | 1.9135         | 0.5620     |
-| Test R-squared     | 0.5620         | 0.5620     |
+| Metric    | Training Value | Test Value |
+| --------- | -------------- | ---------- |
+| RMSE      | 1.7220         | 1.9135     |
+| R-squared | 0.6455         | 0.5620     |
 
 #### Ensemble Model
 
-| Metric                  | Training Value | Test Value |
-| ----------------------- | -------------- | ---------- |
-| Ensemble Training RMSE  | 1.5199         | 1.7171     |
-| Ensemble R-squared      | 0.7128         | 0.6473     |
-| Ensemble Test RMSE      | 1.7171         | 0.6473     |
-| Ensemble Test R-squared | 0.6473         | 0.6473     |
+| Metric    | Training Value | Test Value |
+| --------- | -------------- | ---------- |
+| RMSE      | 1.5199         | 1.7171     |
+| R-squared | 0.7128         | 0.6473     |
 
 These metrics provide insights into how well the models are performing, and users can quickly assess the quality of predictions.
 
